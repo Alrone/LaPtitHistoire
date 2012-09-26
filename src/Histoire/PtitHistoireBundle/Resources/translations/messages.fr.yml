@@ -1,0 +1,11 @@
+outils:
+    boutons:
+        eau: "Eau"
+        soleil: "Soleil"
+        graines: "Graines"
+        pipeau: "Pipeau"
+        temps: "Temps"
+        lettreN: "N"
+
+musique:
+    bouton: "Contrôle de la musique"

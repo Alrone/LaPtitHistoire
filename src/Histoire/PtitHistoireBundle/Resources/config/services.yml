@@ -1,0 +1,7 @@
+parameters:
+#    histoire_ptit_histoire.example.class: Histoire\PtitHistoireBundle\Example
+
+services:
+#    histoire_ptit_histoire.example:
+#        class: %histoire_ptit_histoire.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

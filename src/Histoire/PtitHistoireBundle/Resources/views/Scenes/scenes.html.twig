@@ -1,0 +1,45 @@
+{% extends '::laPtitHistoireLayout.html.twig' %}
+
+
+{% block javascripts %}
+	<script src="{{ asset('js/scenes.js') }}" type="text/javascript"></script>
+{% endblock %}
+
+
+{% block navOutils %}
+    <nav id="navOutils">
+		{% for clefOutil in clefsOutils %}
+	    <a class="boutonOutil" href="#" onclick="soumettreFormChangerScene('{{ clefOutil }}');">
+	    	{% set title = 'outils.boutons.'~clefOutil %}
+	    	<img src="{{ asset('images/outils/'~clefOutil~'.png') }}" alt="{{ title|trans }}" title="{{ title|trans }}"/>
+	    </a>
+	    {% endfor %}
+	    
+	    <form id="formChangerScene" action="{{ path('changerScene') }}" method="POST">
+	    	<input type="hidden" name="numSceneCourante" value="{{ numScene }}"/>
+	    	<input type="hidden" name="clefOutil" value=""/>
+	    </form>
+	</nav>
+{% endblock %}
+
+
+{% block sections %}
+	<section id="sectionPrincipale">
+		<section id="sectionMessage">
+			<img src="{{ asset(imageMessage) }}" alt="{{ nomMessage }}"/>
+		</section>
+		
+		<section id="sectionScene">
+			<img src="{{ asset(imageScene) }}" alt="{{ nomScene }}"/>
+		</section>
+	</section>
+{% endblock %}
+
+
+{% block navMusique %}
+	<nav id="navMusique">
+		<a id="boutonMusique" href="#" onclick="controlerMusique('{{ asset('images/musique/noteMusiqueOn.png') }}', '{{ asset('images/musique/noteMusiqueOff.png') }}');">
+		   	<img src="{{ asset('images/musique/noteMusiqueOn.png') }}" alt="{{ 'musique.bouton'|trans }}" title="{{ 'musique.bouton'|trans }}"/>
+		</a>
+	</nav>
+{% endblock %}

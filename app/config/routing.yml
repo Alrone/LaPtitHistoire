@@ -1,0 +1,9 @@
+HistoirePtitHistoireBundle:
+    resource: "@HistoirePtitHistoireBundle/Controller/"
+    type: annotation
+    #prefix: /ptitHistoire/
+
+# Internal routing configuration to handle ESI
+#_internal:
+#   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#   prefix:   /_internal
